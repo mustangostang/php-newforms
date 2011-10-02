@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Input extends lib_Newforms___Field {
+class Newforms_Input extends Newforms___Field {
 
     public $maxlength = 255;
     public $first_letter_uppercase = false;

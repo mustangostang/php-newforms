@@ -26,7 +26,7 @@ if (!function_exists('win_checkdnsrr')) {
 
 }
 
-class lib_Newforms_InputWebsite extends lib_Newforms_Input {
+class Newforms_InputWebsite extends Newforms_Input {
 
     public $maxlength = 255;
     public $allow_url = false;

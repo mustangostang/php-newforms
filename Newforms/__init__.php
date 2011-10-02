@@ -7,10 +7,10 @@ require_once "__Field.php";
  *
  * Инициализация модели формы:
  *
- *   class FormAddBook extends lib_Newforms {
+ *   class FormAddBook extends Newforms {
  *     public function init() {
- *        $this->name   = new lib_Newforms_Input (array ('required' => true));
- *        $this->author = new lib_Newforms_SelectOrInput (array ('required' => true, 'options' => array ('Foo', 'Bar'), 'default' => 'Foo'));
+ *        $this->name   = new Newforms_Input (array ('required' => true));
+ *        $this->author = new Newforms_SelectOrInput (array ('required' => true, 'options' => array ('Foo', 'Bar'), 'default' => 'Foo'));
  *     }
  *   }
  *
@@ -45,7 +45,7 @@ require_once "__Field.php";
  *
  */
 
-abstract class lib_Newforms {
+abstract class Newforms {
 
   protected $__bound = false;
   protected $__currentStep = 0;
@@ -159,7 +159,7 @@ abstract class lib_Newforms {
    * @param string $field
    */
   protected function setFieldValue ($field) {
-    if ($this->$field instanceof lib_Newforms_File)
+    if ($this->$field instanceof Newforms_File)
       $this->$field->setValue('');
     if (!$this->__bound) return;
     if (is_array($this->__Data)) {
@@ -409,7 +409,7 @@ abstract class lib_Newforms {
     $Data = array();
     foreach ($this->__fields() as $field) {
       $v = $this->$field->cleaned_value();
-      if ($v instanceof lib_Newforms_File_Object) continue;
+      if ($v instanceof Newforms_File_Object) continue;
       $Data[$field] = $v;
     }
     return $Data;

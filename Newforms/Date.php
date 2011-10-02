@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Date extends lib_Newforms___Field {
+class Newforms_Date extends Newforms___Field {
 
     public $show_minutes = true;
     public $delta = 0;

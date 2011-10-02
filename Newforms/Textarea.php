@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Textarea extends lib_Newforms___Field {
+class Newforms_Textarea extends Newforms___Field {
 	
 	public $cols = 80;
 	public $rows = 12;

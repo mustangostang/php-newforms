@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_InputString extends lib_Newforms_Input {
+class Newforms_InputString extends Newforms_Input {
 	
 	public $maxlength = 255;
 	public $charmask = null; // Example: A-Za-z.\-_

@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_InputInteger extends lib_Newforms_Input {
+class Newforms_InputInteger extends Newforms_Input {
 	
 	public $max = null;
 	public $min = null;

@@ -4,7 +4,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_ColorPicker extends lib_Newforms___Field {
+class Newforms_ColorPicker extends Newforms___Field {
 
 	public $options = array();
 	public $type = 'rgb';

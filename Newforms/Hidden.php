@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Hidden extends lib_Newforms___Field {
+class Newforms_Hidden extends Newforms___Field {
 
     public function html() {
         return sprintf('<input type="hidden" id="newforms_%s" name="%s" value="%s"/>', $this->__name,

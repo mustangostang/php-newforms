@@ -3,7 +3,7 @@
 require_once "__Field.php";
 require_once "Select.php";
 
-class lib_Newforms_SelectMonth extends lib_Newforms_Select {
+class Newforms_SelectMonth extends Newforms_Select {
   
 	public $options = array();
 	public $default = null;

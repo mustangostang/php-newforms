@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Captcha extends lib_Newforms___Field {
+class Newforms_Captcha extends Newforms___Field {
 
     public $maxlength = 255;
     public $url = '/captcha/';
@@ -10,7 +10,7 @@ class lib_Newforms_Captcha extends lib_Newforms___Field {
     public function html() {
 
   if (!$this->cleaned_value() || !$this->saved_captcha()) {
-    $Captcha = new lib_Newforms_Captcha_Inner($this->__name);
+    $Captcha = new Newforms_Captcha_Inner($this->__name);
     $Captcha->setBackground('ffffff');
     $Captcha->setFont('6186b2', 22);
     $Captcha->setJitterAngle(70);
@@ -77,7 +77,7 @@ require_once 'Zend/Session/Namespace.php';
 
  */
 
-class lib_Newforms_Captcha_Inner {
+class Newforms_Captcha_Inner {
 
     private $width = 100, $height = 70, $length = 4, $session_name, $request_name,
     $backgroundPath = '', $tiling = 'original',

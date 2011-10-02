@@ -4,7 +4,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_File extends lib_Newforms___Field {
+class Newforms_File extends Newforms___Field {
 
   public $maxlength = 255;
   public $allowed_extensions = array();
@@ -58,10 +58,10 @@ class lib_Newforms_File extends lib_Newforms___Field {
 
     // Ignoring $value from $_POST, it's irrelevant to files.
     if (isset ($_FILES[$this->__name])) {
-      $this->__value = new lib_Newforms_File_Object ($this); return;
+      $this->__value = new Newforms_File_Object ($this); return;
     }
     if (!empty($_POST[$this->__name . '___web'])) {
-      $this->__value = new lib_Newforms_File_Object ($this); return;
+      $this->__value = new Newforms_File_Object ($this); return;
     }
 
 
@@ -131,7 +131,7 @@ class lib_Newforms_File extends lib_Newforms___Field {
   public function validate_extension() {
     if (empty($this->allowed_extensions)) return '';
     $File = $this->value();
-    /* @var $File lib_Newforms_File_Object */
+    /* @var $File Newforms_File_Object */
     if (!$File->checkExtension($this->allowed_extensions))
       return "Недопустимый тип файла: " . $File->extension() . ".";
     return '';
@@ -152,7 +152,7 @@ class lib_Newforms_File extends lib_Newforms___Field {
 /**
 *  A simple class that allows to read a single uploaded file by its name.
 */
-class lib_Newforms_File_Reader {
+class Newforms_File_Reader {
     
     public $name, $mime, $size, $error, $contents;
     
@@ -173,7 +173,7 @@ class lib_Newforms_File_Reader {
 
 
 
-class lib_Newforms_File_Object {
+class Newforms_File_Object {
 
   public $name, $mime, $size, $tmp_name, $error = '', $ok = false;
   public $is_file = false;

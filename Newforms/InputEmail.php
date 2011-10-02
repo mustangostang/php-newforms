@@ -25,7 +25,7 @@ if (!function_exists('checkdnsrr')) {
     }
 }
 
-class lib_Newforms_InputEmail extends lib_Newforms_Input {
+class Newforms_InputEmail extends Newforms_Input {
 	
 	public $maxlength = 255;
         public $isConfirmationOf = null;

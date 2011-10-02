@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_SelectOrInput extends lib_Newforms___Field {
+class Newforms_SelectOrInput extends Newforms___Field {
 
     public $options = array();
     public $maxlength = "255";

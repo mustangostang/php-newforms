@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Select extends lib_Newforms___Field {
+class Newforms_Select extends Newforms___Field {
 
 	public $options = array();
 	/**

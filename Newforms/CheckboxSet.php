@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_CheckboxSet extends lib_Newforms___Field {
+class Newforms_CheckboxSet extends Newforms___Field {
 
   public $options = array();
   /**

@@ -2,7 +2,7 @@
 
 require_once '__Field.php';
 
-class lib_Newforms_Checkbox extends lib_Newforms___Field {
+class Newforms_Checkbox extends Newforms___Field {
   
   public function html() {
   	$html = '<div class="form_checkboxset_container">';

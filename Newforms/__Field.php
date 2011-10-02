@@ -1,6 +1,6 @@
 <?php
 
-abstract class lib_Newforms___Field {
+abstract class Newforms___Field {
 
     /**
      * Name of the field.
@@ -43,7 +43,7 @@ abstract class lib_Newforms___Field {
         $this->setValue (isset ($Params['default']) ? $Params['default'] : '');
     }
 
-    public function setForm (lib_Newforms $Form) {
+    public function setForm (Newforms $Form) {
         $this->__FormContainer = $Form;
         $this->class = trim (implode (' ', array ($this->form()->_css_input, $this->class)));
     }
@@ -310,7 +310,7 @@ abstract class lib_Newforms___Field {
     /**
      * Returns form for this Field.
      *
-     * @return lib_Newforms
+     * @return Newforms
      */
     public final function form() {
         return $this->__FormContainer;

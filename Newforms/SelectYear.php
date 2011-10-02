@@ -3,7 +3,7 @@
 require_once "__Field.php";
 require_once "Select.php";
 
-class lib_Newforms_SelectYear extends lib_Newforms_Select {
+class Newforms_SelectYear extends Newforms_Select {
   
 	public $options = array();
 	public $lower = -10;
