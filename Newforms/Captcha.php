@@ -13,9 +13,9 @@ class lib_Newforms_Captcha extends lib_Newforms___Field {
     $Captcha = new lib_Newforms_Captcha_Inner($this->__name);
     $Captcha->setBackground('ffffff');
     $Captcha->setFont('6186b2', 22);
-    $Captcha->setJitterAngle(30);
-    $Captcha->setJitterSize(10);
-    $Captcha->setJitterTransparency(20);
+    $Captcha->setJitterAngle(70);
+    $Captcha->setJitterSize(25);
+    $Captcha->setJitterTransparency(60);
     $Captcha->output();
   }
 
