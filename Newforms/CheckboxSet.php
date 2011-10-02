@@ -20,6 +20,8 @@ class lib_Newforms_CheckboxSet extends lib_Newforms___Field {
   public $lcase_first = false;
 
   public $glue_with = false;
+  
+  public $max = -1;
 
   private $__typeUsed = null;
 
@@ -27,7 +29,7 @@ class lib_Newforms_CheckboxSet extends lib_Newforms___Field {
   const TYPE_VALUES = 2;
 
   public function html() {
-    $html = '<div class="form_checkboxset_container">';
+    $html = sprintf('<div class="form_checkboxset_container" id="newforms_%s">', $this->__name);
     if (!empty ($this->options)) {
       foreach ($this->options as $key => $value) {
         if ($this->isSelected($key, $value))
@@ -39,6 +41,33 @@ class lib_Newforms_CheckboxSet extends lib_Newforms___Field {
       }
     }
     $html .= "</div>";
+    
+    if ($this->max > 0) {
+    ob_start(); ?>
+    
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+           var container = $("#newforms_<?= $this->__name ?>");
+           $("input", container).change(function() {
+               var count = $("input:checked", container).length;
+               if (count >= <?= $this->max ?>) {
+                   $('input[type=checkbox]', container).not(':checked').each (function() {
+                       $(this).attr ('disabled', 'disabled');
+                       $(this).nextAll ("label").addClass ("disabled");
+                   });
+               } else {
+                   $('input[type=checkbox]', container).attr ("disabled", "");
+                   $("label", container).removeClass ("disabled");
+               }
+           });
+           $($("input", container).get(0)).trigger ('change');
+        });
+    </script>
+    
+    
+    <?php $html .= ob_get_clean();
+    }
+    
     return $html;
   }
 
