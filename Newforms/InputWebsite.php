@@ -32,7 +32,7 @@ class lib_Newforms_InputWebsite extends lib_Newforms_Input {
     public $allow_url = false;
 
     public function html() {
-        return sprintf('<input type="text" id="newforms_%s" name="%s" value="%s" maxlength="%s" class="%s" />',
+        return sprintf('<input type="text" id="newforms_%s" name="%s" value="%s" maxlength="%s" class="%s" placeholder="http://" />',
                 $this->__name, $this->__name, htmlspecialchars($this->value()), $this->maxlength, $this->class);
     }
 
