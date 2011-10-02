@@ -250,6 +250,11 @@ abstract class lib_Newforms {
     $this->addToGroup($groupName, $fieldNames);
     return;
   }
+  
+  public function add_group ($groupName, array $fieldNames = array()) {
+      $this->addToGroup($groupName, $fieldNames);
+      return;      
+  }
 
   /**
    * Adds all ungrouped fields to a group.
