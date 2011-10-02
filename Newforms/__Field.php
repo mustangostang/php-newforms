@@ -26,6 +26,7 @@ abstract class lib_Newforms___Field {
 
     public $__validationMethods = array();
     public $__staticDecorators  = array();
+    public $__forcedErrors      = array();
     /**
      * Array that hold JQuery functions.
      * @var array
@@ -273,6 +274,11 @@ abstract class lib_Newforms___Field {
             $e = call_user_func($method, $this);
             if ($e) $Err[] = $e;
         }
+        
+        foreach ($this->__forcedErrors as $e) {
+            $Err[] = $e;
+        }
+        
         return $Err;
     }
 
@@ -289,6 +295,10 @@ abstract class lib_Newforms___Field {
             $Err[] = 'Поле обязательно должно быть заполнено.';
         }
         return $Err;
+    }
+    
+    public function force_error ($error) {
+        $this->__forcedErrors[] = $error;
     }
 
     public final function sibling ($name) {
