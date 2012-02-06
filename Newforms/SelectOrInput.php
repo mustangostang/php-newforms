@@ -13,6 +13,7 @@ class Newforms_SelectOrInput extends Newforms___Field {
     public $null = null;
     public $autohide = false;
     public $show_input_if_empty = false;
+    public $size = 1;
 
     const SELECT_KEYWORD = 'select';
     const INPUT_KEYWORD = 'input';
@@ -65,7 +66,7 @@ class Newforms_SelectOrInput extends Newforms___Field {
     $id = 'newforms_' . $this->__name;
     $html = '';
     if (!empty ($this->options)) {
-        $html .= sprintf ('<select name="%s[%s]" class="%s" id="%s">', $this->__name, self::SELECT_KEYWORD, $this->class, $id);
+        $html .= sprintf ('<select name="%s[%s]" class="%s" id="%s" size="%s">', $this->__name, self::SELECT_KEYWORD, $this->class, $id, $this->size);
 
         if ($this->null)
             $html .= '<option value="">' . htmlspecialchars($this->null) . '</option>' . "\n";
