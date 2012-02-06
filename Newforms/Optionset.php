@@ -40,10 +40,10 @@ class Newforms_Optionset extends Newforms___Field {
       }
       foreach ($Options as $key => $value) {
         if ($this->isSelected($key, $value))
-          $html .= '<div class="form_checkboxset '. $this->class . '"><input type="radio" name="' . $this->__name . '" checked="checked" value="' .
+          $html .= '<div class="form_checkboxset newforms_optionset '. $this->class . '"><input type="radio" name="' . $this->__name . '" checked="checked" value="' .
               $this->escapeValue($this->optionValue($key, $value)) . '"/><label for="' . $this->__name . '">' . $this->escapeValue($value) . "</label></div>\n";
         else
-          $html .= '<div class="form_checkboxset '. $this->class . '"><input type="radio" name="' . $this->__name . '" value="' .
+          $html .= '<div class="form_checkboxset newforms_optionset'. $this->class . '"><input type="radio" name="' . $this->__name . '" value="' .
               $this->escapeValue($this->optionValue($key, $value)) . '"/><label for="' . $this->__name . '">' . $this->escapeValue($value) . "</label></div>\n";
       }
     }
